@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Kristen Nakagawa",
+    "address": "23132 SW Monroe Blvd",
+    "number": 8084379827,
+    "birthday": "December 7, 2003"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Taryn Nakagawa",
+    "address": "23132 SW Monroe Blvd",
+    "number": 8089853856,
+    "birthday": "December 7, 2003"
+}
+
+### CREATE 3
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Grace Sopko",
+    "address": "2000 Butterfly St",
+    "number": 5459818263,
+    "birthday": "April 16, 2003"
+}
+
+### CREATE 4
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Arielle Mummert",
+    "address": "9762 Bunny St",
+    "number": 8728364729,
+    "birthday": "May 2, 2003"
+}
+
+### CREATE 5
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Owen Dufrenne",
+    "address": "981 SW Yard St",
+    "number": 8273746372,
+    "birthday": "July 7, 2003"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/contacts HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/contacts/64d3b1398146c0d744a4b95b HTTP/1.1
+
+
+### UPDATE one document's address, by ID.
+### Replace the ID in the following request with one that exists
+### and update the address:
+PUT http://localhost:3000/contacts/64d3afbb0816f78a7cedf90a HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Grace",
+    "address": "2016 ST",
+    "number": 5453541234,
+    "birthday": "April 16, 2003"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/contacts/64d3afbb0816f78a7cedf90a HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/contacts HTTP/1.1
+
