@@ -1,0 +1,350 @@
+
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/* ...or hosted services like Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /** --custom-color-name: ;
+  --custom-embellishment-name:;*/
+  --cloud-blue: #dfe7eb;
+  --ocean-blue: rgba(167, 207, 243, 0.6);
+  --dark-blue: #09253f;
+  --dark-green: #3a493e;
+  --ocean-blue-1: #24539d;
+  --moss-green: #2e4b52;
+
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  background-image: url(images/lake.jpeg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  margin: 0 auto; 
+  padding: 1%; 
+  color: var(--dark-blue);
+  font-family: 'Poppins', serif;
+  max-width: 1200px;
+  min-width: 800px;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+
+/*  ----- Page layout blocks -----  */
+header {
+  font-family: Ubuntu;
+  background-color: var(--cloud-blue);
+  text-align: center;
+  padding: 10px;
+  border: 3px solid var(--dark-blue);
+  border-radius: 10px;
+  margin: 10px 200px;
+}
+
+main {
+  background-color: var(--ocean-blue);
+  color: var(--dark-blue);
+  border:  2px solid var(--dark-green);
+  margin: 0px 100px;
+}
+
+footer {
+  color: var(--dark-blue);
+  background-color: var(--ocean-blue);
+  margin-right: 60%;
+  margin-left: 100px;
+}
+
+article {
+  padding: 0px 50px;
+}
+
+h3 {
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  padding-left: 10%;
+  color: var(--dark-blue);
+}
+
+h2 { 
+  text-align:center;
+  color: var(--dark-blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:900; 
+  font-family: 'Noto Sans', serif;
+  margin-top:10px;
+} 
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  text-align: center;
+  justify-content: center;
+  padding: 3%;
+  text-decoration: none;
+  flex-flow: row wrap;
+  display: flex;
+}
+
+nav a {
+  padding: 2%;
+  background-color: rgba(167, 207, 243, 0.5);
+  color: var(--dark-blue);
+  border: 3px solid var(--dark-blue);
+  line-height:3;
+  margin:1px;
+  padding:1% 2%;
+  flex-flow: row wrap;
+  text-decoration:none;
+}
+
+nav a:hover {
+  background-color: var(--cloud-blue);
+}
+
+.local {
+  display:flex;
+  background-color:var(--ocean-blue);
+}
+
+.local a {
+  background-color:var(--dark-green);
+  color: var(--cloud-blue);
+  line-height:3;
+  margin:10px;
+  padding:3% 1%;
+  font-size:90%;
+}
+
+nav.local a:hover {
+  background-color: var(--dark-blue);
+}
+
+
+caption {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+
+
+.sideBySide {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery figure {
+  background-color: var(--ocean-blue);
+  border: 2px solid var(--dark-blue);
+  padding: 2%;
+  width: 300px;
+}
+
+
+.gallery figcaption {
+  color: var(--dark-blue);
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/* Ensuring consistent width for table headers and cells */
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  width: 16.6%; /* This ensures all columns have equal width */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: var(--dark-green);
+  color: var(--cloud-blue);
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: var(--cloud-blue);
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid var(--dark-green);
+}
+
+
+.style-icon {
+  padding-left: 65%;
+  font-size: 40px;
+}
+.style-p {
+  text-align: center;
+  font-weight: 50px;
+}
+
+
+.clicker {
+  display: flex;
+  gap: 15px;
+  font-size: 1em;
+}
+
+.clicker .icon {
+  cursor: pointer;
+  padding: 5px;
+  background-color: var(--ocean-blue);
+  border: 2px solid var(--dark-blue);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page {
+  padding: 50px;
+}
+
+dl {
+  padding-left: 75px;
+}
+
+dt {
+  padding: 20px;
+}
+
+.clicker .icon:hover {
+  background-color: var(--cloud-blue);
+}
+
+.clicker span {
+  min-width: 30px;
+  text-align: center;
+}
+
+.gallery-img {
+  width: 500px;
+  height: 500px;
+}
+
+
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  font-size: 16px;
+  color: var(--cloud-blue);
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-link:hover {
+  background-color: var(--ocean-blue);
+}
+
+
+/* Align the price column to the right */
+.price-column {
+  text-align: right;
+}
+
+
+.fieldset {
+  border: 2px solid var(--dark-blue);    
+  margin-top:3%; 
+  padding:3%;
+}
+
+legend {
+  color:var(--dark-blue);
+  font-size: 130%;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-top:3%;
+}
+
+button, input, select, textarea {
+  font-size: 90%;
+  padding: 2% 5%;
+  font-family:inherit;
+}
+
+textarea {
+  width: 500px;
+  height: 100px;
+}
+
+button {
+  border-right:3px solid var(--dark-blue);
+  border-radius:5px;
+  padding:1%;
+  margin: 1%;
+  background-color:var(--moss-green);
+  color:var(--cloud-blue);
+  font-size:120%;
+
+}
+
+.jokeButton {
+  justify-content: center;
+  align-items: center;
+}
+
+.jokeButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
