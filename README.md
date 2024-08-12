@@ -1,8 +1,10 @@
-# React + Vite
+# Reina Takahara's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website final project portfolio that displays the use of HTML, CSS, JavaScript, ReactJS, MongoDB, APIs, etc.
 
-Currently, two official plugins are available:
+To run the site, MONGODB database credentials need to be inserted in the .env file. Install node_modules by using npm install for both the frontend and backend folders. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Preview
+
+
+
